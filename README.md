@@ -32,6 +32,7 @@ Our problem is 2D [laplace equation](https://en.wikipedia.org/wiki/Laplace%27s_e
 $$ \frac{\partial^{2} \varphi}{\partial x^{2}} + \frac{\partial^{2} \varPhi}{\partial y^{2}} = 0 $$
 
 $$ \text{on} \; 0 \leq x \leq 1, \; 0 \leq y \leq 1 $$
+
 with $\varphi = f(x,y)$ on $\partial D$
 
 Each second derivative can approximate to center differencing approximation:
@@ -50,3 +51,15 @@ we can obatin this linear equation. This is the main equation to solve the lapla
 
 # Solving Approach
 ## Jacobi scheme
+Jacobi scheme is that update the next time step from the current step using following formula.
+
+$$ \varphi_{i,j}^{n+1} = \frac{1}{4} \left( \varphi_{i-1,j} + \varphi_{i+1,j} + \varphi_{i,j-1} + \varphi_{i,j+1} \right) $$
+
+Jacobi scheme is the one of the *explicit method*.
+
+The result of Jacobi method is shown in [Fig. 1.](#fig1)
+
+<a id="fig1"></a>
+![Jacobi_result](Temp_Jacobi.png)
+Fig. 1. Temperature distribution using **Jacobi** scheme
+
