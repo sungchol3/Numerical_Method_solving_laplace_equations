@@ -55,11 +55,26 @@ Jacobi scheme is that update the next time step from the current step using foll
 
 $$ \varphi_{i,j}^{n+1} = \frac{1}{4} \left( \varphi_{i-1,j} + \varphi_{i+1,j} + \varphi_{i,j-1} + \varphi_{i,j+1} \right) $$
 
-Jacobi scheme is the one of the *explicit method*.
+Jacobi scheme is the one of the *explicit* method.
 
 The result of Jacobi method is shown in [Fig. 1.](#fig1)
 
 <a id="fig1"></a>
 ![Jacobi_result](Temp_Jacobi.png)
-Fig. 1. Temperature distribution using **Jacobi** scheme
+Fig 1. Temperature distribution using **Jacobi** scheme
+
+## Gauss-Seidel
+Gauss-Seidel method is that update the next step using both next step and current step. The fomula is as follows:
+
+$$ \varphi_{i,j}^{n+1} = \frac{1}{4} \left( \varphi_{i+1,j}^{n} + \textcolor{red}{\varphi_{i-1,j}^{n+1}} + \varphi_{i,j+1}^{n} + \textcolor{red}{\varphi_{i,j-1}^{n+1}} \right) $$
+
+Gauss-Seidel method is *implicit* method.
+
+The result of Gauss-Seidel method is shown in [Fig. 2.](#fig2)
+
+<a id="fig2"></a>
+![result_Gauss_Seidel](Temp_Gauss_Seidel.png)
+Fig 2. Temperature distribution using **Gauss-Seidel** scheme
+
+Both **Jacobi** and **Gauss-Seidel** scheme is looping until the difference of current steps and next steps become lower than tolerance with $10^{-6}$.
 
