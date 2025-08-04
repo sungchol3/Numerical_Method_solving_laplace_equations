@@ -12,10 +12,10 @@ $$ \nabla^{2} T = 0 \\; \text{where} \\; T(x,y) $$
 
 Boundary Conditions:
 
-$$ T(0,y) = 150 (K) \; \text{for} \; 0 \leq y \leq 1 $$
-$$ T(1,y) = 0 (K) \; \text{for} \; 0 \leq y \leq 1 $$
-$$ T(x,1) = 50 (K) \; \text{for} \; 0 \leq x \leq 1 $$
-$$ T(x,0) = 100 (K) \; \text{for} \; 0 \leq x \leq 1 $$
+$$ T(0,y) = 150 (K) \\; \text{for} \\; 0 \leq y \leq 1 $$
+$$ T(1,y) = 0 (K) \\; \text{for} \\; 0 \leq y \leq 1 $$
+$$ T(x,1) = 50 (K) \\; \text{for} \\; 0 \leq x \leq 1 $$
+$$ T(x,0) = 100 (K) \\; \text{for} \\; 0 \leq x \leq 1 $$
 
 **Find the steady state temperature distribution $T(x,y)$ on the plate by using:**
 
@@ -31,7 +31,7 @@ Our problem is 2D [laplace equation](https://en.wikipedia.org/wiki/Laplace%27s_e
 
 $$ \frac{\partial^{2} \varphi}{\partial x^{2}} + \frac{\partial^{2} \varPhi}{\partial y^{2}} = 0 $$
 
-$$ \text{on} \; 0 \leq x \leq 1, \; 0 \leq y \leq 1 $$
+$$ \text{on} \\; 0 \leq x \leq 1, \\; 0 \leq y \leq 1 $$
 
 with $\varphi = f(x,y)$ on $\partial D$
 
