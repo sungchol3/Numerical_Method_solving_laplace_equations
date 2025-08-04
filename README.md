@@ -63,7 +63,7 @@ The result of Jacobi method is shown in [Fig. 1.](#fig1)
 ![Jacobi_result](Temp_Jacobi.png)
 Fig 1. Temperature distribution using **Jacobi** scheme
 
-## Gauss-Seidel
+## Gauss-Seidel scheme
 Gauss-Seidel method is that update the next step using both next step and current step. The fomula is as follows:
 
 $$ \varphi_{i,j}^{n+1} = \frac{1}{4} \left( \varphi_{i+1,j}^{n} + \textcolor{red}{\varphi_{i-1,j}^{n+1}} + \varphi_{i,j+1}^{n} + \textcolor{red}{\varphi_{i,j-1}^{n+1}} \right) $$
@@ -77,4 +77,27 @@ The result of Gauss-Seidel method is shown in [Fig. 2.](#fig2)
 Fig 2. Temperature distribution using **Gauss-Seidel** scheme
 
 Both **Jacobi** and **Gauss-Seidel** scheme is looping until the difference of current steps and next steps become lower than tolerance with $10^{-6}$.
+
+## SOR scheme
+**SOR(Successive OverRelaxation)** method is advanced method of [Gauss-Seidel method](#gauss-seidel-scheme). The formula is given by:
+
+$$
+\begin{align*}
+\varphi_{i,j}^{n+1} &= \varphi_{i,j}^{n} + \omega \left[ \frac{1}{4} \left( \varphi_{i+1,j}^{n} + \varphi_{i-1,j}^{n+1} + \varphi_{i,j+1}^{n} + \varphi_{i,j-1}^{n+1} \right) - \varphi_{i,j}^{n} \right] \\
+&= \frac{\omega}{4} \left( \varphi_{i+1,j}^{n} + \varphi_{i-1,j}^{n+1} + \varphi_{i,j+1}^{n} + \varphi_{i,j-1}^{n+1} \right) + ( 1 - \omega ) \varphi_{i,j}^{n}
+\end{align*}
+$$
+
+In this formula, $\omega$ is referred to as the **relaxation factor**.
+When $0 < \omega < 1$, it is *under-relaxation* and when $1 < \omega < 2$, it is *over-relaxation*. When you want to accelerate the speed of convergence, you can use *over-relaxaion*. Or use *under-relaxation* for decreasing converegence. You can adjust the relaxation factor during running method.
+
+The best value of relaxation factor cannot be determined easily, but people usually use $\omega = 1.753$.
+
+In this project, I used a relaxation factor $\omega$ of $\frac{2}{1 + \sin (\pi h)}$ for over-relaxation where $h=1/(N+1)$ on the grid $N \times N$ when error is higher than $10^{-3}$, and $0.7$ for under-relaxation when error is lower than $10^{-3}$.
+
+The result of **SOR method** is shown in [Fig. 3](#fig3).
+
+<a id="fig3"></a>
+![Result of SOR method](Temp_SOR.png)
+Fig 3. Temperature distribution using **SOR** scheme.
 
