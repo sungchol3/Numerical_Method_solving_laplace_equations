@@ -8,7 +8,7 @@ Our final project problem was given as follows:
 
 Equation:
 
-$$ \nabla^{2} T = 0 \; \text{where} \; T(x,y) $$
+$$ \nabla^{2} T = 0 \\; \text{where} \\; T(x,y) $$
 
 Boundary Conditions:
 
