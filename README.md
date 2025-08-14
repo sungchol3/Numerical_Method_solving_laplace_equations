@@ -116,3 +116,17 @@ The result of **Monte Carlo method** is shown in [Fig. 4](#fig4).
 ![Result of Monte Carlo method](figure_monte_carlo.png)
 Fig 4. Temperature distribution using **Monte-Carlo** scheme.
 
+## PINN
+Physical-Informed Neural Network(**PINN**) is well-designed neural network model to solve some physical equations.
+The basic principle to solve equations is that neural network is working for the solution functions and additional layers and loss term is designed to satisfy the equation and boundary conditions. The architecture is illustrated in [Fig. 5](#fig5).
+
+<a id="fig5"></a>
+![Structure design of PINN](PINN_design.png)
+Fig 5. The architecture of PINN
+
+The temperature distribution of PINN is shown in [Fig. 6](#fig6).
+
+<a id="fig6"></a>
+![Result of PINN](Temp_PINN.png)
+Fig 6. Temperature distribution using **PINN**
+
