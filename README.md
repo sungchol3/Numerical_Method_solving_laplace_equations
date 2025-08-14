@@ -101,3 +101,18 @@ The result of **SOR method** is shown in [Fig. 3](#fig3).
 ![Result of SOR method](Temp_SOR.png)
 Fig 3. Temperature distribution using **SOR** scheme.
 
+## Monte-Carlo Simulation
+[Monte-Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method) is one of the method to solve various (physical) problems using probability and random data sampling. To solve laplace equation, we can use **Brownian motion** model. If particle starts to move at some point $(x,y)$, and move with random motion(=**Brownian motion**). Then the particle suddenly reach boundary (the point: $B(\tau)$), then the solution at point $(x,y)$ can be approximated with expectation values of boundary values at $g(B(\tau))$. The fomula is as follows:
+
+$$
+T(x,y) \approx E \left[ g(B(\tau)) \right]
+$$
+
+Properties of Brownian motino model is that it takes lots of time(=slow) than other classical method, but its availability is better than others.
+
+The result of **Monte Carlo method** is shown in [Fig. 4](#fig4).
+
+<a id="fig4"></a>
+![Result of Monte Carlo method](figure_monte_carlo.png)
+Fig 4. Temperature distribution using **Monte-Carlo** scheme.
+
